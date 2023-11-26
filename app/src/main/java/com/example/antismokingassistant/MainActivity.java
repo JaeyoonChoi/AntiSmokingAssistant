@@ -34,10 +34,21 @@ public class MainActivity extends AppCompatActivity {
     //
     private Button btn_shoot;
 
+
+    public void onGotoAudioClassfication(View view){
+        //start the Image helper activity
+        Intent intent = new Intent(this, AudioClassificationActivity.class);
+        startActivity(intent);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         //권한
         mPermissionResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
